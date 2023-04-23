@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Nastavuje zpusov vypoctu sirky a vysky prvku*/
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 380px;
+    /*Vycentrovani*/
+    margin: 0 auto;
+}
+
+.wrapper {
+    margin: 2rem 1rem;
+    padding: 20px;
+    background-color: hsl(217, 50%, 16%);
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cube-image {
+    border-radius: 0.6rem;
+    overflow: hidden;
+    /*Vlastnost overflow určuje, zda oříznout obsah nebo přidat posuvníky, když je obsah prvku příliš velký a nevejde se do určené oblasti.*/
+    position: relative;
+
+}
+
+.cube-image img {
+    width: 100%;
+    display: block;
+}
+
+.eye-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+}
+
+.eye-image img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+        /*Funkce CSS translate() přemístí prvek v horizontálním a/nebo vertikálním směru.*/
+}
+
+.cube-image:hover .eye-image {
+    display: block;
+}
+
+.box-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 21px;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.box-text a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.description{
+    line-height: 1.5;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+
+.eth,
+.days-left {
+    display: flex;
+    align-items: center;
+}
+
+.eth p {
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+    padding-left: 7px;
+}
+
+.days-left p {
+    padding-left: 7px;
+    font-weight: 400;
+}
+
+hr {
+    border-color: hsl(215, 32%, 27%);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.author img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.author p a.name {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.author p a.name:hover {
+    color: hsl(178, 100%, 50%);
+}
